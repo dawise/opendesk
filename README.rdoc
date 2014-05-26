@@ -1,11 +1,11 @@
-# OpenDesk Project
+OpenDesk Project
 
 This project aim to change the way small team work toghther on projects.
 Basically we provide a cosy private room over the web, so you can start
 straight away chatting with your team.
 
 It's a perfect tool for students groups, startup teams, or assocation fellows,
-so they can :
+so you can :
 
 * Start a discussion
 
@@ -13,8 +13,6 @@ so they can :
 
 * Upload a file & image
 
-* Archive visually their conversation
+* Archive visually your conversations
 
 * Sign up in seconds.
-
-See you soon online.

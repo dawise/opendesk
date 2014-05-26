@@ -1,3 +1,21 @@
-$btn-default-color: #2980b9;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+$btn-default-color:         #2980b9;
+$font-family-sans-serif:    'Open Sans';
+$navbar-default-bg:          white;
+$jumbotron-bg:               white;
+$body-bg:                    #ecf0f1;
+$navbar-default-brand-color:  #3498db;
 
 @import 'bootstrap';
+
+.center {
+
+text-align: center;
+
+}
+
+.navbar-brand {
+
+  font-weight: bold;
+}
