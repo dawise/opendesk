@@ -1,28 +1,20 @@
-== README
+# OpenDesk Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project aim to change the way small team work toghther on projects.
+Basically we provide a cosy private room over the web, so you can start
+straight away chatting with your team.
 
-Things you may want to cover:
+It's a perfect tool for students groups, startup teams, or assocation fellows,
+so they can :
 
-* Ruby version
+* Start a discussion
 
-* System dependencies
+* Comment on each other proposals
 
-* Configuration
+* Upload a file & image
 
-* Database creation
+* Archive visually their conversation
 
-* Database initialization
+* Sign up in seconds.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+See you soon online.
