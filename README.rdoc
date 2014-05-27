@@ -1,4 +1,4 @@
-OpenDesk Project
+Deskus Project
 
 This project aim to change the way small team work toghther on projects.
 Basically we provide a cosy private room over the web, so you can start
