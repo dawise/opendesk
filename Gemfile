@@ -36,7 +36,7 @@ gem 'rails_12factor'
 gem 'thin'
 
 gem 'devise', '~> 3.2.4'
-gem 'paperclip', '~> 3.0'
+gem 'paperclip', '~> 4.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

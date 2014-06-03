@@ -72,7 +72,7 @@ GEM
     minitest (5.3.4)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
-    paperclip (3.5.4)
+    paperclip (4.1.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
@@ -155,7 +155,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 3.0)
+  paperclip (~> 4.1)
   pg
   rails (= 4.1.1)
   rails_12factor
