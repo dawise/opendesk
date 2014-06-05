@@ -3,6 +3,12 @@ class PostsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit]
 
+
+  def home
+
+
+  end
+
   def index
     @posts = Post.all
   end

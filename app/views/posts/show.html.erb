@@ -1,19 +1,28 @@
+<%= link_to raw('<span class="glyphicon glyphicon-arrow-left">
+      </span> Back'), posts_path %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="panel-heading center">
+  <%= image_tag @post.image.url(:medium) %>
+</div>
+</div>
+    <div class="col-md-offset-3 col-md-6">
+      <div class="panel panel-default">
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
+        <div class="panel-heading center">
+    <p>
+      <strong>Title:</strong>
+      <%= @post.title %>
+    </p>
+  <p><strong><%= @post.user.email if @post.user %></p></strong>
+    <p>
+      <%= @post.description %>
+    </p>
 
-<%= image_tag @post.image.url(:medium) %>
-
-<% if @post.user == current_user %>
-<div>
-<%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>
-<%= link_to 'Back', posts_path %>
+    <% if @post.user == current_user %>
+    <div>
+    <%= link_to raw('<span class="glyphicon glyphicon-pencil">
+      </span> Edit'), edit_post_path(@post) %>
+  <% end %>
 </div>

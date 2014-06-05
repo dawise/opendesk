@@ -54,4 +54,5 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'better_errors'
+gem 'binding_of_caller'
