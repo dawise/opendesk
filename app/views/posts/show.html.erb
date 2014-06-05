@@ -12,8 +12,8 @@
 <%= image_tag @post.image.url(:medium) %>
 
 <% if @post.user == current_user %>
-
+<div>
 <%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
 <%= link_to 'Back', posts_path %>
-
+</div>

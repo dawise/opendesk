@@ -1,15 +1,19 @@
-<div id="post">
+<div id="post" class= "transitions-enabled">
 <% @posts.each do |post| %>
-<div class="box">
-        <%= post.title %>
+<div class="box panel-body">
+        <p><strong><%= post.title %></p></strong>
         <%= post.description %>
-        <%= image_tag post.image.url (:medium) %>
-        <%= post.user.email if post.user %>
-        <%= link_to 'Show', post %>
+        <div class="box panel panel-default">
+        <%= link_to image_tag(post.image.url(:medium)), post %><br/>
+        <p><strong><%= post.user.email if post.user %></p></strong>
         <% if post.user == current_user %>
+        <div class="actions">
         <%= link_to 'Edit', edit_post_path(post) %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete', post, method: :delete, data: { confirm: '
+        Are you sure?' } %>
+          </div>
         <% end %>
+        </div>
       </div>
   <% end %>
 </div>
