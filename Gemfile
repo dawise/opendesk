@@ -42,6 +42,8 @@ gem 'aws-sdk', '~> 1.16.1'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'figaro'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

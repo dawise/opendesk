@@ -13,14 +13,15 @@
           <% if post.user == current_user %>
           <div class="actions">
           <%= link_to 'Edit', edit_post_path(post) %>
-          <%= link_to 'Delete', post, method: :delete, data: { confirm: '
-          Are you sure?' } %>
-            </div>
+          <%= link_to 'View', post_path(post) %>
+          </div>
           <% end %>
           </div>
         </div>
     <% end %>
   </div>
+
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
 <% end %>
-
-
