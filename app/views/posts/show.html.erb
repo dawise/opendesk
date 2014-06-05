@@ -15,11 +15,9 @@
       <strong>Title:</strong>
       <%= @post.title %>
     </p>
-  <p><strong><%= @post.user.email if @post.user %></p></strong>
-    <p>
-      <%= @post.description %>
+    <p> <%= @post.description %>
     </p>
-
+    <p><strong><%= @post.user.email if @post.user %></p></strong>
     <% if @post.user == current_user %>
     <div>
     <%= link_to raw('<span class="glyphicon glyphicon-pencil">
