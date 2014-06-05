@@ -5,11 +5,11 @@
 <% if user_signed_in? %>
   <% @posts.each do |post| %>
   <div class="box panel-body">
-          <p><strong><%= post.title %></p></strong>
-          <%= post.description %>
           <div class="box panel panel-default">
           <%= link_to image_tag(post.image.url(:medium)), post %><br/>
-          <p><strong><%= post.user.email if post.user %></p></strong>
+          <p><strong><%= post.title %></p></strong>
+          <%= post.description %>
+          <p>by <strong><%= post.user.email if post.user %></p></strong>
           <% if post.user == current_user %>
           <div class="actions">
           <%= link_to 'Edit', edit_post_path(post) %>
