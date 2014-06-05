@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.paginate(:page => params[:page], :per_page => 3)
+    @posts = Post.all.paginate(:page => params[:page], :per_page => 9)
 
   end
 
