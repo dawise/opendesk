@@ -41,7 +41,7 @@ gem 'paperclip', '~> 4.1'
 gem 'aws-sdk', '~> 1.16.1'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'figaro'
-gem 'activeadmin', github: 'gregbell/active_admin'
+
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 

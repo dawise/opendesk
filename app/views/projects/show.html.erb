@@ -1,5 +1,25 @@
 <h1><%= @project.name %></h1>
 
+<% if @project.owner == current_user %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        <%= form_tag invitations_path, class: 'form-inline' do %>
+          <%= hidden_field_tag 'project_id', @project.id %>
+
+          <div class="form-group">
+            <%= label_tag 'emails', 'Invite members:' %>
+            <%= text_field_tag 'emails', '', placeholder: 'name@email.com, name@....', class: 'form-control' %>
+          </div>
+
+          <%= submit_tag 'Send invitations', class: 'btn btn-success' %>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div id="post" class= "transitions-enabled">
   <div class="new-post box">
     <div class="panel panel-default">

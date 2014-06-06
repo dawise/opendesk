@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi!</h1>
+    <p>
+      You have been invited to work on the project <%= @project.name %> on
+      Deskus!
+    </p>
+    <p>
+      Check out the project by clicking this link: <%= project_url(@project) %>.
+    </p>
+    <p>Thanks,</p>
+    <p>Deskus Team</p>
+  </body>
+</html>

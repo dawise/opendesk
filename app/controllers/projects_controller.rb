@@ -6,16 +6,21 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @posts = @project.posts.order(created_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    @posts = @project.posts.order(created_at: :desc).paginate(page: params[:page], per_page: 9)
   end
 
   def new
   end
 
   def create
+    # Create new project for current user
     project = current_user.projects.build(project_params)
 
     if project.save
+      # Invite specified members
+      emails = params[:project][:members].gsub(' ', '').split(',')
+      InvitationMailer.invite_members(emails, project)
+
       redirect_to project
     else
       flash[:error] = project.errors.full_messages.join("\n")

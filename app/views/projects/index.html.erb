@@ -1,4 +1,4 @@
-<h1>My projects</h1>
+<h1>My Projects</h1> </br>
 
 <div class="row">
   <div class="col-md-12">
@@ -7,12 +7,12 @@
 
         <div class="form-group">
           <%= f.label :name, 'New project:' %>
-          <%= f.text_field :name, placeholder: 'Project name', class: 'form-control' %>
+          <%= f.text_field :name, placeholder: 'Project Name', class: 'form-control' %>
         </div>
 
         <div class="form-group">
           <%= label_tag 'project[members]', 'Invite members:' %>
-          <%= text_field_tag 'project[members]', '', placeholder: 'Coma-separated emails', class: 'form-control' %>
+          <%= text_field_tag 'project[members]', '', placeholder: 'name@email.com,   @....', class: 'form-control' %>
         </div>
 
         <%= f.submit 'Create', class: 'btn btn-success' %>

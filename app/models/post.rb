@@ -6,6 +6,10 @@ class Post < ActiveRecord::Base
                     :path => ':class/:attachment/:id/:style/:filename'
 
    validates_attachment_content_type :image, :content_type => /\Aimage/
+
+
+
 end
+
 
 

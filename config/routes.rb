@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  get 'pages/home', as: 'home'
+  get 'pages/about', as: 'about'
 
-  get "about" => "pages#about"
+  resource :invitations, only: :create
+  get 'invitations/:invite_key' => 'invitations#join', as: 'join'
 
   resources :projects, except: [:new] do
     resources :posts
   end
 
+  devise_for :users, controllers: { registrations: 'registrations'}
 
-  devise_for :users
-
-  root "projects#index"
+  root 'pages#home'
 
 
 
