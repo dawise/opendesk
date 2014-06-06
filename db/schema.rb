@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605082527) do
+ActiveRecord::Schema.define(version: 20140606140053) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 20140605082527) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "memberships", force: true do |t|
+    t.integer  "member_id"
+    t.integer  "project_id"
+    t.string   "invite_key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "memberships", ["member_id"], name: "index_memberships_on_member_id"
+  add_index "memberships", ["project_id"], name: "index_memberships_on_project_id"
+
   create_table "posts", force: true do |t|
     t.string   "description"
     t.string   "title"
@@ -56,9 +67,17 @@ ActiveRecord::Schema.define(version: 20140605082527) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "project_id"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.integer  "owner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

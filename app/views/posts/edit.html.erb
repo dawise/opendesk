@@ -2,6 +2,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @post %> |
+
 <%= link_to raw('<span class="glyphicon glyphicon-arrow-left">
-      </span> Back'), posts_path %>
+      </span> Back'), project_path(@project) %>
+      |
+<%= link_to 'Show', [@project, @post] %>

@@ -1,5 +1,5 @@
 <%= link_to raw('<span class="glyphicon glyphicon-arrow-left">
-      </span> Back'), posts_path %>
+      </span> Back'), project_path(@project) %>
 
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
@@ -21,6 +21,6 @@
     <% if @post.user == current_user %>
     <div>
     <%= link_to raw('<span class="glyphicon glyphicon-pencil">
-      </span> Edit'), edit_post_path(@post) %>
+      </span> Edit'), edit_project_post_path(@project, @post) %>
   <% end %>
 </div>

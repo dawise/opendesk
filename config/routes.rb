@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :posts
+
+  get "about" => "pages#about"
+
+  resources :projects, except: [:new] do
+    resources :posts
+  end
+
 
   devise_for :users
-  root "posts#index"
-  get "about" => "pages#about"
+
+  root "projects#index"
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

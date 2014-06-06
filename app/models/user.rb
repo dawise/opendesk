@@ -5,4 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts
+
+  # Relation modelling the ownership of projects
+  has_many :projects, foreign_key: :owner_id
+
+  # Relation modelling the memberships in project
+  has_many :memberships, foreign_key: :member_id
 end
